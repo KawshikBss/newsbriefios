@@ -13,13 +13,8 @@ jobs:
       # Manually create and configure the Podfile for iOS 13.0
       - name: Create and Configure Podfile
         run: |
-          mkdir -p ios
-          echo "platform :ios, '13.0'" > ios/Podfile
-          echo "" >> ios/Podfile
-          echo "target 'Runner' do" >> ios/Podfile
-          echo "  flutter_install_all_ios_pods(File.dirname(File.realpath(__FILE__)))" >> ios/Podfile
-          echo "end" >> ios/Podfile
+          pod init
 
       # Verify that the Podfile was created and configured
-      - name: Show Podfile
-        run: cat ios/Podfile
+      #- name: Show Podfile
+      #  run: cat ios/Podfile
