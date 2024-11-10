@@ -18,10 +18,11 @@ jobs:
       # Run Flutter pub get to fetch dependencies
       - run: flutter pub get
 
-      # Generate Podfile and set platform version to iOS 13.0
-      - name: Build iOS to generate Podfile
+      # Generate the Podfile by running an iOS build to create necessary files
+      - name: Generate Podfile
         run: |
-          flutter build ios --release --no-codesign
+          flutter build ios --no-codesign
+          # Update the platform version in the Podfile to iOS 13.0
           sed -i '' 's/platform :ios, .*/platform :ios, "13.0"/' ios/Podfile
 
       # Install CocoaPods dependencies
@@ -31,7 +32,8 @@ jobs:
           pod install
 
       # Build the iOS app in release mode without code signing
-      - run: flutter build ios --release --no-codesign
+      - name: Build iOS App
+        run: flutter build ios --release --no-codesign
 
       # Prepare app for IPA export
       - run: mkdir Payload
