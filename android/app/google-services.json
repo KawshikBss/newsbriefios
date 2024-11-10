@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "637046625595",
+    "project_id": "newsbrief-23d6b",
+    "storage_bucket": "newsbrief-23d6b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637046625595:android:0162bd7a598357e583131e",
+        "android_client_info": {
+          "package_name": "com.newsbrief"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "637046625595-u02hf8c88ot7h071cnejf66q2tkla4if.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYZbxpl1iwHSQVvcFxpRgMgi7bF3hoU24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "637046625595-u02hf8c88ot7h071cnejf66q2tkla4if.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "637046625595-hqiktb7v5ssm01jr0l7a6q2l338d521e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.newsbriefapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637046625595:android:66f3203a803ebc3083131e",
+        "android_client_info": {
+          "package_name": "com.newsbriefapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "637046625595-0nth3210kgm75lj9puuenb593k2a113h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.newsbriefapp",
+            "certificate_hash": "9a893ddb2167ced9559aec46ed851441469355b5"
+          }
+        },
+        {
+          "client_id": "637046625595-l3a5bvqcls8eksf26nppmrtovvvqsmg3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.newsbriefapp",
+            "certificate_hash": "4af3d60b90245da89863ac404eb738b09bf8fd35"
+          }
+        },
+        {
+          "client_id": "637046625595-u02hf8c88ot7h071cnejf66q2tkla4if.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYZbxpl1iwHSQVvcFxpRgMgi7bF3hoU24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "637046625595-u02hf8c88ot7h071cnejf66q2tkla4if.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "637046625595-hqiktb7v5ssm01jr0l7a6q2l338d521e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.newsbriefapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
