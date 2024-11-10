@@ -10,22 +10,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
-          architecture: x64
-
-      # Run Flutter pub get to fetch dependencies
-      - name: Install Dependencies
-        run: flutter pub get
-
-      # Generate Podfile and set the platform version to iOS 13.0
-      - name: Generate and Update Podfile
+      # Manually create and configure the Podfile for iOS 13.0
+      - name: Create and Configure Podfile
         run: |
-          flutter build ios --no-codesign
-          # Update the Podfile to set iOS platform version to 13.0
-          sed -i '' 's/platform :ios, .*/platform :ios, "13.0"/' ios/Podfile
+          mkdir -p ios
+          echo "platform :ios, '13.0'" > ios/Podfile
+          echo "" >> ios/Podfile
+          echo "target 'Runner' do" >> ios/Podfile
+          echo "  flutter_install_all_ios_pods(File.dirname(File.realpath(__FILE__)))" >> ios/Podfile
+          echo "end" >> ios/Podfile
 
-      # Verify that the Podfile was generated and updated
+      # Verify that the Podfile was created and configured
       - name: Show Podfile
         run: cat ios/Podfile
