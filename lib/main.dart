@@ -15,13 +15,11 @@ import 'package:newsbriefapp/presentation/widgets/layouts/main_layout.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:newsbriefapp/core/locale_provider.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Stripe.publishableKey =
       'pk_test_51Q1mPBRrzj49tN1wZtrKa6p7EMNKtxKpY1xfDjlNEzZySKWbuS76nVW3Xu5zzxB6UfD9ne6IUaQi8Cckxp5cINGb00rGhgFPns';
-  await Firebase.initializeApp();
   runApp(
     ChangeNotifierProvider(
       create: (_) => LocaleProvider(),
