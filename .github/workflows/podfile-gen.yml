@@ -10,6 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Change dir
+        run: |
+          cd ios
+          
       # Manually create and configure the Podfile for iOS 13.0
       - name: Create and Configure Podfile
         run: |
