@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:newsbriefapp/domain/stripe_service.dart';
 import 'package:newsbriefapp/presentation/widgets/components/layout/custom_alert.dart';
 
 class DonationPayment extends StatefulWidget {
@@ -18,17 +17,7 @@ class _DonationPaymentState extends State<DonationPayment> {
     });
   }
 
-  void makePayment() async {
-    bool res = await StripeService.instance.makePayment(_amount);
-    if (res) {
-      Navigator.pop(context);
-      ScaffoldMessenger.of(context)
-          .showSnackBar(showCustomAlert('Amount donated successfully!'));
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-          showCustomAlert('Some error occurred while making donation!'));
-    }
-  }
+  void makePayment() async {}
 
   @override
   Widget build(BuildContext context) {

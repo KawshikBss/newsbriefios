@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:async_storage_local/async_storage_local.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:newsbriefapp/data/light_theme_data.dart';
 import 'package:newsbriefapp/presentation/views/auth/login_page.dart';
 import 'package:newsbriefapp/presentation/views/donation/donation_payment.dart';
@@ -18,8 +17,6 @@ import 'package:newsbriefapp/core/locale_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Stripe.publishableKey =
-      'pk_test_51Q1mPBRrzj49tN1wZtrKa6p7EMNKtxKpY1xfDjlNEzZySKWbuS76nVW3Xu5zzxB6UfD9ne6IUaQi8Cckxp5cINGb00rGhgFPns';
   runApp(
     ChangeNotifierProvider(
       create: (_) => LocaleProvider(),
