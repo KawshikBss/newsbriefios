@@ -4,7 +4,6 @@ import 'package:async_storage_local/async_storage_local.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:newsbriefapp/domain/auth_requests.dart';
-import 'package:newsbriefapp/domain/auth_service.dart';
 import 'package:newsbriefapp/presentation/widgets/components/auth/auth_text_field.dart';
 import 'package:newsbriefapp/presentation/widgets/components/layout/custom_alert.dart';
 import 'package:newsbriefapp/presentation/widgets/components/layout/preloader.dart';
@@ -90,25 +89,7 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  void handleSocialLogin() async {
-    setState(() {
-      _isLoading = true;
-    });
-    var response = await signInWithGoogle();
-    setState(() {
-      _isLoading = false;
-    });
-    if (response['success']) {
-      String token = response['token'];
-      String user = jsonEncode(response['user']).toString();
-      tokenStorage.saveString(token);
-      userStorage.saveString(user);
-      Navigator.pushNamed(context, '/profile');
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-          showCustomAlert('Some error occurred please try again!'));
-    }
-  }
+  void handleSocialLogin() async {}
 
   @override
   Widget build(BuildContext context) {
